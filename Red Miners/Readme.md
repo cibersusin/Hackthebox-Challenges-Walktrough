@@ -11,7 +11,13 @@ En nuestro Kali Linux nos descargamos el fichero zip, y lo descomprimimos.
 
 # Solución 
 Visualizamos el archivo con cat, divisamos varias cadenas a las que se le aplica un descodificación en base 64, por lo que después de probar algunas vemos que hay ir recolectando varias cadenas y unirlas.
-Tenemos que tener claro que las cadenas en Base64 suelen acabar con 2 espacios. 
+
+Tenemos que tener claro que las cadenas en Base64 suelen acabar con 2 espacios, así que vamos a ser eficientes y utilizaremos un filtro para realizar una busqueda rápida.
+
+```
+cat miner_installer.sh | grep "=="
+```
+![curl](Images/busqueda_flags.png)
 
 
 ### Parte 1:
@@ -46,3 +52,4 @@ export part4="_th3_r3d_pl4n3t}"
 ### Solución final
 Si reconstruimos las cadenas formamos: **"HTB{m1n1ng_th31r_w4y_t0_m4rs_th3_r3d_pl4n3t}**
 
+![curl](Images/red_miners_completed.png)
