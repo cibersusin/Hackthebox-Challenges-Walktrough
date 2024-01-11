@@ -13,7 +13,8 @@ En nuestro Kali Linux nos descargamos el fichero zip, y lo descomprimimos.
 1. Lo que tenemos que hacer es visualizar el archivo con cat
 2. Copiar la cadena de base64 y decodearla (ya sea con Linux o con alguna web)
 
-```
+```shell
+cat persistence.sh
 echo cadena_base64 | base64 -d
 ```
 
