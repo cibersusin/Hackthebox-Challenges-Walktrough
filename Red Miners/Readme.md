@@ -12,8 +12,13 @@ En nuestro Kali Linux nos descargamos el fichero zip, y lo descomprimimos.
 # Solución 
 Visualizamos el archivo con cat, divisamos varias cadenas a las que se le aplica un descodificación en base 64, por lo que después de probar algunas vemos que hay ir recolectando varias cadenas y unirlas.
 
-Cadena 1:
 ```shell
+cat miner_installer.sh | grep "base64"
+
 echo -n cGFydDE9IkhUQnttMW4xbmciCg==|base64 -d
-part1="HTB{m1n1ng"
+#part1="HTB{m1n1ng"
+
+echo "ZXhwb3J0IHBhcnQ0PSJfdGgzX3IzZF9wbDRuM3R9Ig==" | base64 -d
+export part4="_th3_r3d_pl4n3t}"
+
 ```
