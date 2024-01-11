@@ -15,7 +15,7 @@ En nuestro Kali Linux nos descargamos el fichero zip, y lo descomprimimos.
 
 ```shell
 cat persistence.sh
-echo cadena_base64 | base64 -d
+echo 'cadena_base64' | base64 -d
 ```
 
 ![curl](Images/ea_flag_v2.png)
