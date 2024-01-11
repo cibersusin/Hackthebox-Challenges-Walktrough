@@ -1,5 +1,5 @@
 # Red Miners - Very easy (HTB Challenge)
-Red Miners (Mineros rojos) es un reto "muy fácil" para desofuscar la flag que se encuentra en un script Powershell
+Red Miners (Mineros rojos) es un reto "muy fácil" para desofuscar la flag que se encuentra en un script de bash.
 
 # Descripción del reto (Traducción oficial)
 En la carrera por Vitalium en Marte, la malvada Junta de Arodor recurrió a medidas desesperadas, necesitando fondos para sus intentos de minería. Idearon una botnet diseñada específicamente para extraer criptomonedas de forma encubierta. Nos topamos con una muestra del instalador del minero de Arodor en nuestro servidor. 
