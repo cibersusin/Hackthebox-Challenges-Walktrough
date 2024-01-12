@@ -1,5 +1,5 @@
 # MarketDump - Easy (HTB Challenge)
-MarketDump (invasión alienigena) es un reto "fácil" para analizar ficheros de tráfico.
+MarketDump (Volcado de mercado) es un reto "fácil" para analizar ficheros de tráfico.
 
 ## Descripción del reto (Traducción oficial)
 Nos informaron que un pirata informático logró ingresar a nuestra red interna después de navegar a través de la plataforma web que se ejecuta en la Internet pública. Logró eludir nuestra plataforma de registro de existencias de productos pequeños y luego obtuvo el archivo de nuestra base de datos de clientes. Creemos que sólo uno de nuestros clientes fue el objetivo. **¿Puedes averiguar quién era el cliente?**
