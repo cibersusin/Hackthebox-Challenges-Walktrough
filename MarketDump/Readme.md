@@ -33,7 +33,7 @@ Una vez visualizando detectamos que han accedido con admin/admin y que se abre u
 Ahora filtramos con el puerto 9999 para entender esa comunicación **tcp.port==9999** y también analizamos el TCP stream.
 ![curl](Images/tcp_stream_9999.png)
 
-## Solución
+# Solución
 Analizando el dump de la base de datos de clientes encontramos un código de cliente más largo que el resto, así que copiamos la clave, entendemos que está codificada o cifrada.
 ![curl](Images/client_code.png)
 
