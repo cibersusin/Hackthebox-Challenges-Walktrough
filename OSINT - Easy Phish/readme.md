@@ -36,9 +36,9 @@ dig _dmarc.secure-startup.com TXT
 ```
 Ahora sí que tenemos la segunda parte: *_F1ddl3_2_DMARC}*
 
-![curl](Images/cradle_flag.png)
+![curl](Images/"dig secure-startup dmarc".png)
 
 El resultado lo copiamos de Kali y lo pegamos en "Submit flag", por lo que si todo ha ido bien habremos superado este primer desafio.
 ¡Enhorabuena!
 
-![curl](Images/alien_cradle_completed.png)
+![curl](Images/flag_captured_easy_phish.png)
