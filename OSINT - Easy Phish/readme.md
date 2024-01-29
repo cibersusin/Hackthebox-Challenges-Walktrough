@@ -1,5 +1,5 @@
 # Easy Phish - Very easy (HTB Challenge - OSINT)
-Alien Cradle (invasión alienigena) es un reto "muy fácil" para desofuscar la flag que se encuentra en un script Powershell
+Empezamos en OSINT con una de los desafios más sencillos que hay en la plataforma para ir entendiendo el procedimiento.
 
 ## DESCRIPCIÓN DEL RETO (Traducción oficial)
 Los clientes de **secure-startup.com** han estado recibiendo algunos correos electrónicos de phishing muy convincentes. ¿Puedes descubrir por qué?
