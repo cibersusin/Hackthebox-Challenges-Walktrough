@@ -12,9 +12,10 @@ Reconozca los sitios de redes sociales para ver si puede encontrar información 
 Buscamos Evil Corp LLC en Google y nos encontramos una flag clarisima en la descripción de la empresa en Linkedin.
 ![curl](Images/primera_flag.png)
 
-La comprobamos y es erronea... ¿Podría estar codificad? Así que revisamos en cyberchef con la función "Magic" que puede ser.
+La comprobamos y es erronea... ¿Podría estar codificada? Así que revisamos en **cyberchef** con la función "Magic" que puede ser.
 ![curl](Images/primera_flag_descifrada.png)
-Pero nos han trolleado, así que esto era un callejón sin salida.
+
+El texto es Base64 pero nos han vuelto a trolear, esto era un callejón sin salida.
 
 
 ### Segunda flag.
