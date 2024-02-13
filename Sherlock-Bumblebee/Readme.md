@@ -71,10 +71,10 @@ Pues como veis el formato es incorrecto, así que tendremos que modificar la col
 Ahora vamos a entender el timeline:
 - El día 25/4 a las 11:09 desde la ip 10.255.254.2: Se crea una contraseña para apoole, se actualiza el usuario y se habilita la extensión "rokx/dborldap" para que pueda integrarse en servidores LDAP
 - El día 26/4 es cuando se autentica desde la ip 10.10.0.78, se añade al grupo Administrators y se guardan los cambios, así conseguir persistencia.
-![curl](Images/tarea5_log_fechas.png)
+![curl](Images/tarea5_phpbb_log_fechas.png)
 También lo hubiéramos podido extraer en el access.log (pero era más complicado verlo) ya que si nos fijamos bien el foro es *phpbb*, y la página de login es: /admin/index.php y se introduce el SID, y vemos el codigo "200" que es estado exitoso.
 ![curl](Images/tarea5_access_log.png)
-** Mucho cuidado que el formato que nos dice Hackthebox es muy estricto, además que es UTC: 26/04/2023 10:53:12
+** Mucho cuidado que el formato que nos dice Hackthebox es muy estricto, además que es UTC.
 
 
 ## Tarea 6
