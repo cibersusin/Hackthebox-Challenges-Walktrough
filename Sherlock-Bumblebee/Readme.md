@@ -6,14 +6,14 @@ Adjuntamos algunos registros del foro y un volcado de base de datos completo en 
 ## Preparación del entorno
 Lo primero es descargarnos el archivo bumble, quedando 2 archivos:
 - **phpbb.sqlite3:** Es la base de datos del foro, en formato SQLite que podemos abrir con "DB Browser for SQlite"
-- **access.log**: El el archivo de registro donde están las solicitudes realizadas al servidor web.
+- **access.log**: Es el archivo de registro donde están las solicitudes realizadas al servidor web.
 
 Yo lo voy a hacer con un sistema operativo Windows, ya que es un ejercicio de leer y comprender logs, pero sí tú eres de distribuciones forenses (Caine, Tsurugi, Sans) pues adelante, tenemos que llegar a las mismas conclusiones.
 
 ## Tarea 1
 **¿Cuál es el usuario de nombre de usuario de contratista externo?**
 
-Para acceder a este registro tendremos que abrir el phpbb.sqlite3 con el software que utilicemos, en mi caso: DB Browser for SQLite desde Windows, pero aquí a gusto personal.
+Para acceder a este registro tendremos que abrir el phpbb.sqlite3 con el software que utilicemos, en mi caso: DB Browser for SQLite como os he mencionado anteriormente, pero eso a gusto personal.
 
 Seleccionamos la tabla: phpbb_users y nos aparecen los nombres en la columna: username.
 ![curl](Images/tarea1_username.png)
