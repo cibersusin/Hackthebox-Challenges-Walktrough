@@ -11,7 +11,8 @@ Lo primero es descargarnos el archivo bumble, quedando 2 archivos:
 Yo lo voy a hacer con un sistema operativo Windows, ya que es un ejercicio de leer y comprender logs, pero sí tú eres de distribuciones forenses (Caine, Tsurugi, Sans) pues adelante, tenemos que llegar a las mismas conclusiones.
 
 ## Tarea 1
-*¿Cuál es el usuario de nombre de usuario de contratista externo?*
+**¿Cuál es el usuario de nombre de usuario de contratista externo?**
+
 Para acceder a este registro tendremos que abrir el phpbb.sqlite3 con el software que utilicemos, en mi caso: DB Browser for SQLite desde Windows, pero aquí a gusto personal.
 
 Seleccionamos la tabla: phpbb_users y nos aparecen los nombres en la columna: username.
@@ -19,19 +20,22 @@ Seleccionamos la tabla: phpbb_users y nos aparecen los nombres en la columna: us
 
 
 ## Tarea 2
-*¿Cuál es la dirección que utilizó el contratista para la creación de su cuenta?*
+**¿Cuál es la dirección que utilizó el contratista para la creación de su cuenta?**
+
 Esta es muy sencilla, en la misma tabla que mostramos arriba tenemos la ip en la columna "user_ip"
 
 
 ## Tarea 3 
-*¿Cuál es el post_ID de la publicación maliciosa que hizo el contratista?*
+**¿Cuál es el post_ID de la publicación maliciosa que hizo el contratista?**
+
 Si nos dicen "post_id" nos vamos a buscar una tabla que sea de posts, y encontramos "phpbb_posts".
 Correlacionamos la ip que hemos visto que pertenecia al contratista y vemos que el registro asociado es: 9.
 ![curl](Images/tarea3_ip.png)
 
 
 ## Tarea 4
-*¿Cuál es la URI completa que el ladrón de credenciales envía sus datos?*
+**¿Cuál es la URI completa que el ladrón de credenciales envía sus datos?**
+
 Al final de esta misma tabla podemos ver el campo post_text.
 Nos copiamos el contenido o lo descargamos, en mi caso lo llamo post.html
 ![curl](Images/tarea4_post_text.png)
@@ -63,6 +67,7 @@ A este ataque se le llama: robo de cookie o secuestro de sesión, en este caso u
 
 ## Tarea 5
 **¿Cuándo el contratista inició sesión al foro como administrador (UTC)**
+
 Si queremos saber inicios tendremos que ir a por logs, así que nos ubicamos en la *tabla "phpbb_log"*, y vemos una columna que es *log time*. ¿Bien, no?
 Pues como veis el formato es incorrecto, así que tendremos que modificar la columna con *Elija el formato de presentación > Tiempo Unix a fecha*
 
@@ -79,6 +84,7 @@ También lo hubiéramos podido extraer en el access.log (pero era más complicad
 
 ## Tarea 6
 **¿En el foro hay credenciales en texto plano para la conexión LDAP? ¿Cuál es la contraseña?**
+
 Nos ponemos a buscar donde está configurado LDAP al foro, por lo que vamos a phpbb_config.
 Mirando entre todos los campos encontramos ldap_password: y su contraseña en texto plano como nos decían ;) 
 ![curl](Images/tarea6_phpbb_config.png)
@@ -86,6 +92,7 @@ Mirando entre todos los campos encontramos ldap_password: y su contraseña en te
 
 ## Tarea 7
 **¿Cuál es el user-agent del usuario Administrator?**
+
 Ahora sí que toca revisar el access.log para ver las peticiones y nos guiaremos por el formato que nos pide hackthebox.
 Lo que buscamos es el login en /adm/index.php ya que entra como administrador. Por lo que lo comprobamos y listo:
 ```shell
@@ -94,11 +101,13 @@ Lo que buscamos es el login en /adm/index.php ya que entra como administrador. P
 
 ## Tarea 8
 **¿Cuál es la fecha que el contratista se añadió el mismo al grupo administrador? (UTC)**
+
 Si os acordais esto ya lo hemos analizado anteriormente en la tarea 3 con su imagen.
 
 
 ### Tarea 9 
 **¿Cuál es la fecha y hora que el contratista descarga la base de datos? (UTC)**
+
 Tenemos claro por la tarea 3 que empieza la copia el día 26-04-2023 a las 10.54:31, que comprobamos y no funciona, por lo que necesitamos saber la hora de descarga.
 
 Así que nos vamos a partir de las 10.54, agilizamos la busqueda con "backup" y buscamos alguna extensión para saber cuando se descarga el archivo. 
@@ -110,9 +119,10 @@ Acabando a las 26/04/2023 11:01:38
 
 ## Tarea 10
 **¿Cuál es el tamaño en bytes del backup de la base de datos según access.log?**
+
 Esto lo tenemos en la anterior petición: 34707 bytes.
 
-Y ya hemos acabado este divertido Sherlock
+Y ya hemos acabado este divertido Sherlock, espero que os haya gustado y pronto traeré más a este github. ;) 
 ![curl](Images/sherlock_completed.png)
 
 
